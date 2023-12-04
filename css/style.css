@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  --c-lightred: hsl(0, 100%, 67%);
+  --c-lightredbg: hsla(0, 100%, 67%, 0.1);
+  --c-orangeyyellow: hsl(39, 100%, 56%);
+  --c-orangeyyellowbg: hsla(39, 100%, 56%, .1);
+  --c-greenteal: hsl(166, 100%, 37%);
+  --c-greentealbg: hsla(166, 100%, 37%, .1);
+  --c-cobaltblue: hsl(234, 85%, 45%);
+  --c-cobaltbluebg: hsla(234, 85%, 45%, .1);
+  --cg-lightslatebluebg: hsl(252, 100%, 67%);
+  --cg-lightroyalbluebg: hsl(241, 81%, 54%);
+  --cg-violetbluecircle: hsla(256, 72%, 46%, 1);
+  --cg-persianbluecircle: hsla(241, 72%, 46%, 0);
+  --c-white: hsl(0, 0%, 100%);
+  --c-paleblue: hsl(221, 100%, 96%);
+  --c-lightlavender: hsl(241, 100%, 89%);
+  --c-darkgrayblue: hsl(224, 30%, 27%);
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 735px;
+  height: 510px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0px 0px 4rem var(--c-paleblue);
+}
+.card > * {
+  width: 50%;
+}
+.card__header {
+  border-radius: 40px;
+  background: var(--cg-lightroyalbluebg);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+}
+.card__header > * {
+  width: fit-content;
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+}
+.card__title {
+  color: var(--c-lightlavender);
+}
+.card__grade {
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 3rem;
+  margin: 0 auto;
+  background: linear-gradient(180deg, var(--cg-violetbluecircle), var(--cg-persianbluecircle));
+}
+.card__header .card__score {
+  color: var(--c-white);
+  font-size: 4rem;
+  width: fit-content;
+  height: fit-content;
+  line-height: 1;
+  margin: 0 auto 0 auto;
+}
+.card__header .card__total {
+  color: var(--c-paleblue) !important;
+  margin: auto;
+  width: fit-content;
+}
+.card__honor {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--c-white);
+}
+.card__comment {
+  margin-top: 1rem;
+  color: var(--c-lightlavender);
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 250px !important;
+}
+.card__body {
+  padding: 2rem;
+  height: auto;
+}
+.card__summary {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: 0;
+  margin-bottom: calc(1.8rem) !important;
+}
+.card__alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 290px;
+  max-height: 55px;
+  width: 290px;
+  height: 55px;
+  border-radius: 8px;
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.card__body .card__description {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card__body .card__score {
+  color: var(--c-lightlavender);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card__body .card__score span {
+  margin-right: 0.4rem;
+}
+.card__alert .card__score span, .card__summary {
+  font-weight: 800;
+  color: var(--c-darkgrayblue);
+}
+.card__btn {
+  cursor: pointer;
+  border-radius: 40px;
+  text-align: center;
+  outline: none;
+  border: none;
+  justify-content: center;
+  color: var(--c-white);
+  background: var(--c-darkgrayblue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  max-width: 290px;
+  max-height: 55px;
+  width: 290px;
+  height: 55px;
+  margin-top: calc(40px - 1rem);
+}
+.card__reaction {
+  background: var(--c-lightredbg);
+}
+.card__reaction p span {
+  color: var(--c-lightred);
+}
+.card__visual {
+  background: var(--c-cobaltbluebg);
+}
+.card__visual p span {
+  color: var(--c-cobaltblue);
+}
+.card__memory {
+  background: var(--c-orangeyyellowbg);
+}
+.card__memory p span {
+  color: var(--c-orangeyyellow);
+}
+.card__verbal {
+  background: var(--c-greentealbg);
+}
+.card__verbal p span {
+  color: var(--c-greenteal);
+}
+
+/*# sourceMappingURL=style.css.map */
