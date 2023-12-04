@@ -32,6 +32,7 @@ html, * {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .card {
@@ -49,6 +50,7 @@ html, * {
 .card__header {
   border-radius: 40px;
   background: var(--cg-lightroyalbluebg);
+  background: linear-gradient(180deg, var(--cg-lightslatebluebg), var(--cg-lightroyalbluebg));
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -82,7 +84,7 @@ html, * {
   margin: 0 auto 0 auto;
 }
 .card__header .card__total {
-  color: var(--c-paleblue) !important;
+  color: var(--c-lightlavender) !important;
   margin: auto;
   width: fit-content;
 }
@@ -100,6 +102,7 @@ html, * {
 }
 .card__body {
   padding: 2rem;
+  padding-top: 2.8rem;
   height: auto;
 }
 .card__summary {
@@ -158,6 +161,10 @@ html, * {
   height: 55px;
   margin-top: calc(40px - 1rem);
 }
+.card__btn:hover {
+  background: var(--c-cobaltblue);
+  background: linear-gradient(180deg, var(--cg-lightslatebluebg), var(--cg-lightroyalbluebg));
+}
 .card__reaction {
   background: var(--c-lightredbg);
 }
@@ -181,6 +188,81 @@ html, * {
 }
 .card__verbal p span {
   color: var(--c-greenteal);
+}
+
+@media (max-width: 768px) {
+  .page {
+    min-height: 100vh !important;
+    height: auto !important;
+  }
+
+  .card {
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    overflow: visible;
+    background: var(--c-white);
+  }
+  .card > * {
+    width: 100% !important;
+  }
+  .card__header {
+    height: 355px !important;
+    min-height: 355px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    padding-bottom: 40px !important;
+    box-sizing: border-box;
+  }
+  .card__header .card__grade {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .card__header .card__grade > * {
+    margin: 0;
+  }
+  .card__header .card__grade .card__score {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .card__header > * {
+    max-width: 320px !important;
+  }
+  .card__body {
+    height: 490px !important;
+    min-height: 450px !important;
+    padding: 1rem calc(calc(100% - 315px) / 2);
+    padding-top: 1.5rem;
+    height: auto;
+  }
+  .card_body > .card__alert {
+    margin: 1rem 0;
+  }
+  .card__body .card__summary {
+    margin: auto;
+    width: 315px !important;
+    margin-bottom: 38px !important;
+  }
+  .card__alert, .card__btn {
+    margin: 1rem auto;
+    width: 315px !important;
+    height: 55px !important;
+    max-width: 315px !important;
+    max-height: 55px !important;
+  }
+}
+.attribution {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
